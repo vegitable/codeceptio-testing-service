@@ -6,7 +6,8 @@
   "license": "ISC",
   "scripts": {
     "start": "node app.js",
-    "test:e2e": "codeceptjs run --steps --verbose --config=./e2eTests/docker.conf.js"
+    "test:e2eLive": "testingUrl='http://www.vegitable.land' codeceptjs run --steps --verbose --config=./e2eTests/docker.conf.js",
+    "test:e2eTest": "testingUrl='http://reactuiservice.eu-west-2.elasticbeanstalk.com' codeceptjs run --steps --verbose --config=./e2eTests/docker.conf.js"
   },
   "dependencies": {
     "express": "^4.16.3"

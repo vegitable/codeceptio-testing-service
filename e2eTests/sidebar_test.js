@@ -1,7 +1,7 @@
 Feature('Homepage');
 
 Scenario('SideBar should open on click of burger button.', I => {
-  I.amOnPage('http://reactuiservice.eu-west-2.elasticbeanstalk.com/restaurants');
+  I.amOnPage(process.env.testingUrl);
   I.waitForElement('.logo', 10);
   I.click('.bm-burger-button');
   I.waitForElement('.bm-item-list')
@@ -9,7 +9,7 @@ Scenario('SideBar should open on click of burger button.', I => {
 });
 
 Scenario('SideBar "HOME" Link should route to "/"', I => {
-  I.amOnPage('http://reactuiservice.eu-west-2.elasticbeanstalk.com/restaurants');
+  I.amOnPage(process.env.testingUrl);
   I.waitForElement('.logo', 10);
   I.click('.bm-burger-button');
   I.waitForElement('.bm-item-list')
